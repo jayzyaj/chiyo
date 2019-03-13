@@ -1,36 +1,34 @@
 import React, { Component } from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+// redux imports
+import { createStore, applyMiddleware, combineReducers } from "redux";
+import { Provider } from "react-redux";
+import createSagaMiddleware from 'redux-saga';
+import logger from "redux-logger";
 
-export default class App extends Component {
+import * as reducers from "./reducers";
+import rootSaga from './sagas';
+
+import NavigationService from "./config/routes/NavigationService";
+import AppContainer from "./config/routes/Router";
+
+const sagaMiddleware = createSagaMiddleware()
+const createStoreWithMiddleware = applyMiddleware(sagaMiddleware, logger)(createStore);
+const reducer = combineReducers(reducers);
+const store = createStoreWithMiddleware(reducer);
+
+sagaMiddleware.run(rootSaga);
+
+class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-      </View>
+      <Provider store={store}>
+        <AppContainer
+          ref={navigatorRef => NavigationService.setTopLevelNavigator(navigatorRef)}
+        />
+      </Provider>
     );
   }
 }
+
+export default App;

@@ -28,5 +28,7 @@ module.exports = {
         "import/no-unresolved": 2,
         "no-console": "off",
         "max-len": 0,
+        "react/forbid-prop-types": [0],
+        "no-unused-expressions":  ["error", { "allowShortCircuit": false, "allowTernary": true }]
     }
 };
