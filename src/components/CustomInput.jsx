@@ -24,10 +24,10 @@ const CustomInput = ({ icon, value, placeholder, secureTextEntry, onChangeText }
         marginHorizontal: 8,
         borderWidth: 1,
         borderRadius: 16,
-        borderColor: COLOR.PANTOME,
+        borderColor: COLOR.PURPLE,
       }}
     >
-      <Icon name={icon} size={24} color={COLOR.PANTOME} />
+      <Icon name={icon} size={24} color={COLOR.PURPLE} />
     </View>
     <TextInput
       style={{

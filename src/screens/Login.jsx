@@ -27,7 +27,7 @@ class Login extends Component {
     headerTintColor: COLOR.LIGHT,
     headerStyle: {
       borderBottomWidth: 0,
-      backgroundColor: COLOR.PANTOME,
+      backgroundColor: COLOR.PURPLE,
     },
   }); // navigationOptions
 

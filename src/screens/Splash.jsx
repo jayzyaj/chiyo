@@ -36,8 +36,8 @@ class Splash extends Component {
           { justifyContent: "center", alignItems: "center", backgroundColor: COLOR.DARK },
         ]}
       >
-        <StatusBar backgroundColor={COLOR.PANTOME} barStyle="light-content" />
-        <Text style={{ color: COLOR.PANTOME, fontSize: 36, fontWeight: "bold" }}>
+        <StatusBar backgroundColor={COLOR.PURPLE} barStyle="light-content" />
+        <Text style={{ color: COLOR.PURPLE, fontSize: 36, fontWeight: "bold" }}>
           Chiyo
         </Text>
       </View>

@@ -1,6 +1,6 @@
 const COLOR = {
   DARK: "#040207",
-  PANTOME: "#FFB32A", // CITRUS YELLOW BLAST
+  PANTONE: "#FFB32A", // CITRUS YELLOW BLAST
   LIGHT: "#ffffff",
   // GRAY: "#9A9A9A",
   LIGHTER_GRAY: "#f2f2f2",

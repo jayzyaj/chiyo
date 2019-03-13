@@ -20,7 +20,7 @@ class CustomButton extends Component {
         <TouchableNativeFeedback onPress={() => onPress()}>
           <View
             style={{
-              backgroundColor: COLOR.PANTOME,
+              backgroundColor: COLOR.PURPLE,
               height: 40,
               justifyContent: "center",
               alignItems: "center",
@@ -42,7 +42,7 @@ class CustomButton extends Component {
     return ( // IOS
       <TouchableOpacity
         style={{
-          backgroundColor: COLOR.PANTOME,
+          backgroundColor: COLOR.PURPLE,
           alignSelf: "stretch",
           height: 40,
           justifyContent: "center",

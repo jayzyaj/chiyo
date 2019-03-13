@@ -17,6 +17,8 @@ import Login from "../../screens/Login";
 import Home from "../../screens/tabs/Home";
 import Settings from "../../screens/tabs/Settings";
 
+const ICON_SIZE = 20;
+
 const LoginScreen = createStackNavigator(
   { // Screens
     Login: { screen: Login },
@@ -47,7 +49,7 @@ const AppTabNavigator = createBottomTabNavigator(
       screen: HomeScreen,
       navigationOptions: {
         tabBarIcon: ({ tintColor }) => (
-          <Icon name="ios-home" color={tintColor} size={24} />
+          <Icon name="ios-home" color={tintColor} size={ICON_SIZE} />
         ),
       },
     },
@@ -55,7 +57,7 @@ const AppTabNavigator = createBottomTabNavigator(
       screen: SettingsScreen,
       navigationOptions: {
         tabBarIcon: ({ tintColor }) => (
-          <Icon name="ios-more" color={tintColor} size={24} />
+          <Icon name="ios-more" color={tintColor} size={ICON_SIZE} />
         ),
       },
     },
@@ -63,7 +65,7 @@ const AppTabNavigator = createBottomTabNavigator(
     initialRouteName: 'Home',
     tabBarOptions: {
       showLabel: false,
-      activeTintColor: COLOR.PANTOME,
+      activeTintColor: COLOR.PURPLE,
     },
   },
 );
