@@ -22,6 +22,7 @@ module.exports = {
     "rules": {
         "react/jsx-filename-extension": "off",
         "react/prefer-stateless-function": [0, { "ignorePureComponents": false }],
-        "quotes": [2, "double", { "avoidEscape": true }]
+        "quotes": [2, "double", { "avoidEscape": true }],
+        "no-underscore-dangle":  ["error", { "allow": ["_navigator"] }]
     }
 };
