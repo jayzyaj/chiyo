@@ -21,6 +21,7 @@ module.exports = {
     ],
     "rules": {
         "react/jsx-filename-extension": "off",
-        "react/prefer-stateless-function": [0, { "ignorePureComponents": false }]
+        "react/prefer-stateless-function": [0, { "ignorePureComponents": false }],
+        "quotes": [2, "double", { "avoidEscape": true }]
     }
 };
