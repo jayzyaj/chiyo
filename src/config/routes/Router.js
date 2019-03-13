@@ -1,12 +1,21 @@
+/* eslint-disable react/prop-types */
+import React from 'react'
 import {
   createSwitchNavigator,
   createAppContainer,
-  // createBottomTabNavigator,
+  createBottomTabNavigator,
   createStackNavigator,
 } from 'react-navigation';
 
+import Icon from "react-native-vector-icons/Ionicons";
+import COLOR from "../constants/themes/Colors";
+
 import Splash from "../../screens/Splash";
 import Login from "../../screens/Login";
+
+// Tabs
+import Home from "../../screens/tabs/Home";
+import Settings from "../../screens/tabs/Settings";
 
 const LoginScreen = createStackNavigator(
   { // Screens
@@ -14,11 +23,56 @@ const LoginScreen = createStackNavigator(
   },
 );
 
+const HomeScreen = createStackNavigator(
+  { // Screens
+    Home: {
+      screen: Home,
+    },
+  }, { // Default options
+  },
+);
+
+const SettingsScreen = createStackNavigator(
+  { // Screens
+    Settings: {
+      screen: Settings,
+    },
+  }, { // Default options
+  },
+);
+
+const AppTabNavigator = createBottomTabNavigator(
+  { // Screens
+    Home: {
+      screen: HomeScreen,
+      navigationOptions: {
+        tabBarIcon: ({ tintColor }) => (
+          <Icon name="ios-home" color={tintColor} size={24} />
+        ),
+      },
+    },
+    Settings: {
+      screen: SettingsScreen,
+      navigationOptions: {
+        tabBarIcon: ({ tintColor }) => (
+          <Icon name="ios-more" color={tintColor} size={24} />
+        ),
+      },
+    },
+  }, { // Default options
+    initialRouteName: 'Home',
+    tabBarOptions: {
+      showLabel: false,
+      activeTintColor: COLOR.PANTOME,
+    },
+  },
+);
+
 const AppSwitchNavigator = createSwitchNavigator(
   { // Screens
     Splash: { screen: Splash },
     Login: { screen: LoginScreen },
-    // Main: { screen: AppTabNavigator }
+    Main: { screen: AppTabNavigator },
   }, { // Default options
     initialRouteName: 'Splash',
   },

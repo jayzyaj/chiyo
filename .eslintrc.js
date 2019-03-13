@@ -29,6 +29,7 @@ module.exports = {
         "no-console": "off",
         "max-len": 0,
         "react/forbid-prop-types": [0],
-        "no-unused-expressions":  ["error", { "allowShortCircuit": false, "allowTernary": true }]
+        "no-unused-expressions":  ["error", { "allowShortCircuit": false, "allowTernary": true }],
+        'semi': [0, 'always']
     }
 };
