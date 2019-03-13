@@ -51,7 +51,11 @@ CustomInput.propTypes = {
   placeholder: Proptypes.string.isRequired,
   value: Proptypes.string.isRequired,
   onChangeText: Proptypes.func.isRequired,
-  secureTextEntry: Proptypes.bool.isRequired,
+  secureTextEntry: Proptypes.bool,
+};
+
+CustomInput.defaultProps = {
+  secureTextEntry: false,
 };
 
 export default CustomInput;
