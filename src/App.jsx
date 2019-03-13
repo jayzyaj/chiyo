@@ -12,7 +12,7 @@ import rootSaga from './sagas';
 import NavigationService from "./config/routes/NavigationService";
 import AppContainer from "./config/routes/Router";
 
-const sagaMiddleware = createSagaMiddleware()
+const sagaMiddleware = createSagaMiddleware();
 const createStoreWithMiddleware = applyMiddleware(sagaMiddleware, logger)(createStore);
 const reducer = combineReducers(reducers);
 const store = createStoreWithMiddleware(reducer);

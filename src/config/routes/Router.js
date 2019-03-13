@@ -14,7 +14,7 @@ const AppSwitchNavigator = createSwitchNavigator(
     // Main: { screen: AppTabNavigator }
   }, { // Default options
     initialRouteName: 'Splash',
-  }
+  },
 );
 
 const AppContainer = createAppContainer(AppSwitchNavigator);
