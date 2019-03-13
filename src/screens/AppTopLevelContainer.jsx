@@ -7,9 +7,7 @@ class AppTopLevelContainer extends Component {
   render() {
     return (
       <AppContainer
-        ref={navigatorRef => {
-          NavigationService.setTopLevelNavigator(navigatorRef);
-        }}
+        ref={navigatorRef => NavigationService.setTopLevelNavigator(navigatorRef)}
       />
     );
   }
