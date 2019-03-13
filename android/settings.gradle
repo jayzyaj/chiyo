@@ -1,0 +1,3 @@
+rootProject.name = 'Chiyo'
+
+include ':app'
