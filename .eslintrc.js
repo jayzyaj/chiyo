@@ -25,6 +25,8 @@ module.exports = {
         "quotes": [0, "double", { "avoidEscape": true }],
         "no-underscore-dangle":  ["error", { "allow": ["_navigator"] }],
         "arrow-parens": ["error", "as-needed"],
-        "import/no-unresolved": 2
+        "import/no-unresolved": 2,
+        "no-console": "off",
+        "max-len": 0,
     }
 };

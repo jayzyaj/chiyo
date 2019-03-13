@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import NavigationService from "../config/routes/NavigationService";
+import NavigationService from "./config/routes/NavigationService";
 
-import AppContainer from "../config/routes/Router";
+import AppContainer from "./config/routes/Router";
 
 class AppTopLevelContainer extends Component {
   render() {
